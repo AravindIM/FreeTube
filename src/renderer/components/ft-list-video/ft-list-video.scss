@@ -3,3 +3,14 @@
 .thumbnailLink:hover {
   outline: 3px solid var(--side-nav-hover-color);
 }
+
+.ft-list-video {
+  transition: all 0.2s ease-in 0.8s;
+  background-color: var(--bg-color);
+}
+.ft-list-video:hover {
+  z-index: 1;
+  transform: scale(1.3);
+  padding: 5px;
+  border-radius: 12px;
+}
