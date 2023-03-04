@@ -86,12 +86,12 @@
   outline: none;
   width: 100%;
   padding: 1rem;
-  border: none;
+  border: 1px solid #303030;
   margin-bottom: 10px;
   font-size: 16px;
   height: 45px;
   color: var(--secondary-text-color);
-  border-radius: 5px;
+  border-radius: 40px 0px 0px 40px;
   background-color: var(--search-bar-color);
 }
 
@@ -122,11 +122,12 @@
 .inputAction {
   position: absolute;
   margin: 0 3px;
-  padding: 10px;
-  top: -8px;
-  right: 0;
-  border-radius: 100%;
-  color: var(--primary-text-color);
+  padding: 14px 25px;
+  top: -13px;
+  right: -69px;
+  border-radius: 0 20px 20px 0;
+  color: var(--bg-color);
+  background-color: var(--primary-text-color);
   /* this should look disabled by default */
   opacity: 50%;
 }
