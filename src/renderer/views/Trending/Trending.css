@@ -12,8 +12,8 @@
 
 .trendingInfoTabs {
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: flex;
+  justify-content: start;
   margin-top: -3px;
   color: var(--tertiary-text-color);
   margin-bottom: 10px;
