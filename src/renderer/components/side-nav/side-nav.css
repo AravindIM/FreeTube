@@ -1,7 +1,7 @@
 .sideNav {
   display: block;
   height: calc(100vh - 60px);
-  width: 200px;
+  padding: 1px;
   overflow-x: hidden;
   position: sticky;
   left: 0;
@@ -39,8 +39,11 @@
 
 .navOption, .navChannel {
   position: relative;
-  padding: 5px;
+  padding: 1px;
   min-height: 35px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 15px;
 }
 
 .moreOption {
@@ -122,7 +125,8 @@
 
 .closed .navOption {
   width: 100%;
-  padding: 5px 0px;
+  padding: 20px 0px;
+  margin: 0;
 }
 
 .closed .navIcon {

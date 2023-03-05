@@ -6,16 +6,39 @@
   user-select: none;
 }
 
+.videoOptions .iconButton {
+  border-radius: 2em;
+  cursor: pointer;
+  height: 0.8em;
+  transition: background 0.15s ease-out;
+  width: 5em;
+  background-color: var(--side-nav-hover-color) !important;
+  margin-left: 0.5em;
+}
+
+.videoOptions .iconButton:hover {
+  background-color: var(--side-nav-active-color) !important;
+}
+
+.likeSection .iconButton {
+  border-radius: none;
+  cursor: pointer;
+  height: unset !important;
+  transition: background 0.15s ease-out;
+  width: unset !important;
+  margin-left: 0.5em;
+}
+
+.likeSection .iconButton.favorite {
+    color: var(--favorite-icon-color);
+}
+
 .iconButton {
   border-radius: 50%;
   cursor: pointer;
   height: 1em;
   transition: background 0.15s ease-out;
   width: 1em;
-
-  &.shadow {
-    box-shadow: 0 1px 2px rgb(0 0 0 / 50%);
-  }
 
   &.base {
     background-color: var(--card-bg-color);
@@ -58,7 +81,7 @@
 
   &.secondary {
     background-color: var(--accent-color);
-    color: var(--text-with-accent-color);
+    color: var(--primary-text-color);
 
     &:hover,
     &:focus {
@@ -86,6 +109,7 @@
   text-align: center;
   user-select: none;
   z-index: 3;
+  border-radius: 10px;
 
   &.left {
     right: calc(50% - 10px);

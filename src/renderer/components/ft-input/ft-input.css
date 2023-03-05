@@ -83,10 +83,10 @@
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  outline: none;
+  outline: none !important;
   width: 100%;
   padding: 1rem;
-  border: 1px solid #303030;
+  border: 1px solid var(--side-nav-active-color);
   margin-bottom: 10px;
   font-size: 16px;
   height: 45px;
@@ -125,6 +125,7 @@
   padding: 14px 25px;
   top: -13px;
   right: -69px;
+  border: 1px solid var(--side-nav-hover-color);
   border-radius: 0 20px 20px 0;
   color: var(--bg-color);
   background-color: var(--primary-text-color);

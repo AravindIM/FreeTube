@@ -1,6 +1,6 @@
 <template>
   <ft-card
-    class="card"
+    class="card commentBox"
   >
     <h4
       v-if="commentData.length === 0 && !isLoading"
@@ -24,6 +24,17 @@
     >
       {{ $t("Comments.Click to View Comments") }}
     </h4>
+    <h4
+      v-if="commentData.length > 0 && !isLoading && showComments"
+      class="hideCommentsTitle"
+      role="button"
+      tabindex="0"
+      @click="showComments = false"
+      @keydown.space.prevent="showComments = false"
+      @keydown.enter.prevent="showComments = false"
+    >
+      {{ $t("Comments.Hide Comments") }}
+    </h4>
     <ft-select
       v-if="commentData.length > 0 && !isLoading && showComments"
       class="commentSort"
@@ -33,22 +44,7 @@
       :select-values="sortValues"
       @change="handleSortChange"
     />
-    <h3
-      v-if="commentData.length > 0 && !isLoading && showComments"
-      class="commentsTitle"
-    >
-      {{ $t("Comments.Comments") }}
-      <span
-        class="hideComments"
-        role="button"
-        tabindex="0"
-        @click="showComments = false"
-        @keydown.space.prevent="showComments = false"
-        @keydown.enter.prevent="showComments = false"
-      >
-        {{ $t("Comments.Hide Comments") }}
-      </span>
-    </h3>
+
     <div
       v-if="commentData.length > 0 && showComments"
     >

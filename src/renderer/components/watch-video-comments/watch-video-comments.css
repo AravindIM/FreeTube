@@ -2,33 +2,46 @@
   padding: 0 16px;
 }
 
+.commentBox {
+  border-radius: 2em;
+  padding-left: 0;
+  padding-right: 0;
+}
 .getCommentsTitle,
 .commentsTitle,
 .getMoreComments {
   margin: 0;
 }
 
+
 .getCommentsTitle {
-  padding-bottom: 8px;
-  padding-top: 8px;
+  padding: 1em;
   text-align: center;
-  text-decoration: underline;
+  border-radius: 2em;
   cursor: pointer;
-  color: var(--title-color);
+  transition: background 0.15s ease-out;
+  width: 73em;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--side-nav-hover-color) !important;
 }
 
-.commentsTitle,
-.getMoreComments {
-  padding-bottom: 1em;
-  padding-top: 1em;
+.getCommentsTitle:hover {
+  background-color: var(--side-nav-active-color) !important;
 }
+
+/* .getCommentsTitle { */
+/*   padding-bottom: 8px; */
+/*   padding-top: 8px; */
+/*   text-align: center; */
+/*   text-decoration: underline; */
+/*   cursor: pointer; */
+/*   color: var(--title-color); */
+/* } */
+
 
 .center {
   text-align: center;
-}
-
-.commentSort {
-  float: right;
 }
 
 .comment {
@@ -40,12 +53,39 @@
   padding-bottom: 0;
 }
 
-.hideComments {
-  font-size: 13px;
-  text-decoration: underline;
+.hideCommentsTitle {
+  padding: 1em;
+  text-align: center;
+  border-radius: 2em;
   cursor: pointer;
-  color: var(--title-color);
+  transition: background 0.15s ease-out;
+  width: 73em;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--side-nav-hover-color) !important;
 }
+
+.hideCommentsTitle:hover {
+  background-color: var(--side-nav-active-color) !important;
+}
+
+.getMoreComments {
+  padding: 1em;
+  text-align: center;
+  border-radius: 2em;
+  cursor: pointer;
+  transition: background 0.15s ease-out;
+  width: 50 rem;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--side-nav-hover-color) !important;
+  text-decoration: none !important;
+}
+
+.getMoreComments:hover {
+  background-color: var(--side-nav-active-color) !important;
+}
+
 
 .commentThumbnail {
   float: left;
@@ -169,5 +209,4 @@
   text-align: center;
   text-decoration: underline;
   cursor: pointer;
-  color: var(--title-color);
 }

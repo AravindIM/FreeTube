@@ -250,10 +250,14 @@ export default defineComponent({
 
     subscribedText: function () {
       if (this.isSubscribed) {
-        return `${this.$t('Channel.Unsubscribe').toUpperCase()} ${this.subscriptionCountText}`
+        return `${this.$t('Channel.Unsubscribe').toUpperCase()}`
       } else {
-        return `${this.$t('Channel.Subscribe').toUpperCase()} ${this.subscriptionCountText}`
+        return `${this.$t('Channel.Subscribe').toUpperCase()}`
       }
+    },
+
+    subCount: function () {
+      return `${this.subscriptionCountText}`
     },
 
     dateString() {

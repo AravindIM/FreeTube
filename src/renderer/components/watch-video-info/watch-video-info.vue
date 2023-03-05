@@ -23,19 +23,22 @@
               >
             </router-link>
           </div>
-          <div>
+          <div class="channelSubRow">
+            <div>
             <router-link
               :to="`/channel/${channelId}`"
               class="channelName"
             >
               {{ channelName }}
             </router-link>
+            <div class="subCount">
+            {{ subCount }}
+            </div>
+            </div>
             <ft-button
               v-if="!hideUnsubscribeButton"
               :label="subscribedText"
               class="subscribeButton"
-              background-color="var(--primary-color)"
-              text-color="var(--text-with-main-color)"
               @click="handleSubscription"
             />
           </div>
@@ -43,25 +46,7 @@
       </div>
     </div>
     <div>
-      <div class="datePublished">
-        {{ publishedString }} {{ dateString }}
-      </div>
-      <div class="viewCount">
-        {{ parsedViewCount }}
-      </div>
-      <div
-        v-if="!hideVideoLikesAndDislikes"
-        class="likeBarContainer"
-      >
-        <div
-          class="likeSection"
-        >
-          <div>
-            <span class="likeCount"><font-awesome-icon :icon="['fas', 'thumbs-up']" /> {{ parsedLikeCount }}</span>
-          </div>
-        </div>
-      </div>
-      <!--
+            <!--
       // Uncomment if suitable solution for bringing back dislikes is introduced
       <div
         v-if="!hideVideoLikesAndDislikes"
@@ -81,16 +66,32 @@
         </div>
       </div>
       -->
-      <div class="videoOptions">
-        <ft-icon-button
-          v-if="!isUpcoming"
-          :title="$t('Video.Save Video')"
-          :icon="['fas', 'star']"
-          class="option"
-          :theme="favoriteIconTheme"
-          @click="toggleSave"
-        />
-        <ft-icon-button
+     <div class="videoOptions">
+      <div
+        v-if="!hideVideoLikesAndDislikes"
+        class="likeBarContainer"
+        @click="toggleSave"
+      >
+        <div
+          class="likeSection"
+        >
+          <div>
+            <span class="likeCount">
+              <font-awesome-icon
+                :title="title"
+                :icon="['fas', 'thumbs-up']"
+                :class="{
+                [favoriteIcontheme]: true,
+                shadow: true,
+                }"
+              />
+              {{ parsedLikeCount }}
+            </span>
+          </div>
+        </div>
+      </div>
+
+       <ft-icon-button
           v-if="externalPlayer !== ''"
           :title="$t('Video.External Player.OpenInTemplate', { externalPlayer })"
           :icon="['fas', 'external-link-alt']"
@@ -127,6 +128,16 @@
         />
       </div>
     </div>
+
+    <div class="viewPub">
+      <div class="viewCount">
+        {{ parsedViewCount }}
+      </div>
+      <div class="datePublished">
+        {{ publishedString }} {{ dateString }}
+      </div>
+    </div>
+
   </ft-card>
 </template>
 

@@ -51,7 +51,6 @@
           v-if="isVideo || isPlaylist"
           class="action"
           aria-describedby="youtubeShareImage"
-          background-color="var(--accent-color-active)"
           @click="copyYoutubeEmbed()"
         >
           <font-awesome-icon :icon="['fas', 'copy']" />
@@ -61,7 +60,6 @@
           v-if="isVideo || isPlaylist"
           class="action"
           aria-describedby="youtubeShareImage"
-          background-color="var(--accent-color-active)"
           @click="openYoutubeEmbed()"
         >
           <font-awesome-icon :icon="['fas', 'globe']" />
@@ -99,7 +97,6 @@
           v-if="isVideo || isPlaylist"
           aria-describedby="invidiousShare"
           class="action"
-          background-color="var(--accent-color-active)"
           @click="copyInvidiousEmbed()"
         >
           <font-awesome-icon :icon="['fas', 'copy']" />
@@ -109,7 +106,6 @@
           v-if="isVideo || isPlaylist"
           aria-describedby="invidiousShare"
           class="action"
-          background-color="var(--accent-color-active)"
           @click="openInvidiousEmbed()"
         >
           <font-awesome-icon :icon="['fas', 'globe']" />
