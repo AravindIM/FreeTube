@@ -47,6 +47,11 @@
 .comment {
   padding: 15px;
   position: relative;
+  border-radius: 10px;
+}
+
+.comment:hover {
+  background-color: var(--side-nav-hover-color);
 }
 
 .comment:last-child {
