@@ -44,16 +44,6 @@
         :size="appearance === `watchPlaylistItem` ? 12 : 16"
         @click="handleExternalPlayer"
       />
-      <ft-icon-button
-        v-if="!isLive"
-        :title="$t('Video.Save Video')"
-        :icon="['fas', 'star']"
-        class="favoritesIcon"
-        :theme="favoriteIconTheme"
-        :padding="appearance === `watchPlaylistItem` ? 5 : 6"
-        :size="appearance === `watchPlaylistItem` ? 14 : 18"
-        @click="toggleSave"
-      />
       <div
         v-if="addWatchedStyle"
         class="videoWatched"

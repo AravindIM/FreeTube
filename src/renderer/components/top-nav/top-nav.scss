@@ -11,7 +11,6 @@
   align-content: center;
   align-items: center;
   background-color: var(--card-bg-color);
-  box-shadow: 0 2px 1px 0 var(--primary-shadow-color);
   display: flex;
   height: 60px;
   left: 0;
@@ -89,14 +88,6 @@
   $effect-distance: 100px;
 
   margin-left: $effect-distance;
-
-  &.filterChanged {
-    box-shadow: 0 0 $effect-distance var(--primary-color);
-
-    @include top-nav-is-colored {
-      box-shadow: 0 0 $effect-distance var(--text-with-main-color);
-    }
-  }
 }
 
 .side {
